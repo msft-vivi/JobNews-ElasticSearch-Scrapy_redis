@@ -11,7 +11,8 @@
 ### Contact
 
 * 如果觉得本项目对你有帮助，请给个**star**鼓励一下  
-<br>
+<br>  
+
 * email : bravezhangw@163.com      
 
 ### Project Structure
@@ -35,7 +36,8 @@
         <br>
 * Scrapy
     * Scrapy-redis 
- <br>
+ <br>  
+
 * ElasticSearch
     * ElasticSearch Install & config
         * [问题及解决方案](https://blog.csdn.net/Tianweidadada/article/details/108705408)
@@ -56,7 +58,7 @@
   
 ### How to run ?
 * scrapy-redis端(example)
-<br>
+    <br>  
     * 运行add_seed.py添加种子
         * 确保redis服务已经启动
         * 也可以通过 在redis-cli.exe 客户端执行如下命令添加种子
@@ -70,18 +72,18 @@
     * 使用kibana的console适应GET命令查看ElasticSearch数据存储情况
         * 你需要确保kibana服务已经启动，然后访问本地5601端口进入kinaba console
         * 如 GET /jobnews/_count 查看数据总量 
-<br>
+    <br>
 * web-elasticsearch端(WebProject)
-<br>
+    <br>
     * 在 Pycharm terminal 执行命令  
     `python manage.py runserver`
-<br>
+    <br>
     * 浏览器打开本地8000端口
 ### Simple Display
 * 详情请参考根目录下的项目说明文档
 
 * 项目主界面  
-<br>
+    <br>
 ![项目主页](gitimg/p_main.png)
 * 检索结果展示界面  
 
