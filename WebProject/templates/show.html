@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load staticfiles %}  
+<html>
+ <head>
+   <title>详细信息</title>
+   <link rel="icon" type="image/x-icon" href="../static/img/logo.jpg"/> 
+  <meta charset="utf-8" /> 
+  <link rel="stylesheet" href="../static/css/style.css" type="text/css" />   
+</head>
+ <body>
+
+   <div id="show_search" align="center" > 
+
+    <form action="/result/" method="get">
+      {%csrf_token%} 
+     <a href="/search" style="text-decoration:none "> <img src="../static/img/logo.jpg" alt="logo" id="small_logo" /> </a> 
+     <input type="text" name="keyword" placeholder="工作类型" value="" id="search" /> 
+     <input type="submit" value="查询一下" id="submit_button" /> 
+    </form> 
+
+    <div style="width:800px;text-align:left;">
+
+    <h1 style="font-size:20px;">{{content.job}}</h1> 
+        城市：{{content.zone}}  &nbsp; &nbsp; 经验：{{content.experience}} &nbsp; &nbsp; 学历：{{content.educated}}
+    <br>
+    工资：{{ content.salary.0.max }}-{{ content.salary.0.min }}千/月  &nbsp; &nbsp; 公司：{{content.company}}  &nbsp; &nbsp; 发布日期：{{content.publishdate}}
+
+   <article> 
+    <p>{{content.description}}</p> 
+   </article> 
+   <div class="article-tags">
+    标签：
+    <a class="cat" href="#list/2/" rel="tag"></a>
+    <a href="/result/?keyword={{content.kind.0.kind1}}" rel="tag">{{content.kind.0.kind1}}</a>&nbsp;
+    <a href="/result/?keyword={{content.kind.0.kind2}}" rel="tag">{{content.kind.0.kind2}}</a>
+   </div> 
+   <div class="relates" align="left"> 
+    <div class="title"> 
+     <h3>职位推荐</h3> 
+    </div> 
+    <ul> 
+     <li><a href="/result/?keyword=Java" title="">Java</a></li> 
+     <li><a href="/result/?keyword=数据挖掘" title="">数据挖掘</a></li> 
+     <li><a href="/result/?keyword=机器学习" title="">机器学习</a></li> 
+     <li><a href="/result/?keyword=人工智能" title="">人工智能</a></li> 
+     <li><a href="/result/?keyword=深度学习" title="">深度学习</a></li> 
+     <li><a href="/result/?keyword=安卓开发" title="">安卓开发</a></li> 
+     <li><a href="/result/?keyword=Web开发" title="">Web开发</a></li> 
+     <li><a href="/result/?keyword=IOS开发" title="">IOS开发</a></li> 
+    </ul> 
+   </div> 
+ </div>
+   </div> 
+ </body>
+</html>

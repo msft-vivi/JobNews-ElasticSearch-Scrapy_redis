@@ -1,0 +1,211 @@
+#page {
+    margin-top: 15%;
+            }
+#left{
+    margin-top:2%;
+}
+#show_search{
+    margin-top:10%;
+}
+#small_logo{
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+}
+#search {
+    width: 500px;
+    height: 38px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#submit_button{
+    vertical-align: middle;
+    width:82px;
+    height:38px;
+    background:#0086DB;
+    border:0;
+    border-radius:10px;
+    margin-top:0px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+#targe{
+    width:50px;
+    height:38px;
+    background:white;
+    border:0;
+    
+    margin-top:5px;
+    color:#0086DB;
+    font-size:16px;
+}
+input:focus{
+    border-color:#66AFE9 !important;
+    outline:0;
+    --webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+    --moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,0.6);
+}
+::-webkit-input-placeholder{
+    text-indent: 20px;
+    font-size:16px;
+}
+/*::-moz-input-placeholder{*/
+/*    text-indent: 20px;*/
+/*    font-size:16px;*/
+/*}*/
+
+
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,button,input,textarea,p,span,th,td,article,aside,nav,section,img,a {
+    outline:none;
+    transition:all 0.30s ease-in-out;
+    -webkit-transition:all 0.30s ease-in-out;
+    -moz-transition:all 0.30s ease-in-out;
+    -o-transition:all 0.30s ease-in-out;
+    -ms-transition:all 0.30s ease-in-out;
+}
+
+a {
+    cursor:pointer;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:none;
+}
+
+
+body,input,button,textarea,select {
+    font-family:"Microsoft YaHei","微软雅黑","Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+
+.excerpt {
+    clear:both;
+    width:500px;
+    border:1px solid #EAEAEA;
+    padding:20px 20px 20px 255px;
+    overflow:hidden;
+    background-color:#fff;
+    margin-bottom:-1px;
+}
+.excerpt:hover {
+    background-color:#FBFDFF;
+    border-color:#42B5EF;
+    position:relative;
+    z-index:20;
+}
+.excerpt-1 {
+    border-radius:4px 4px 0 0;
+}
+.excerpt .focus {
+    float:left;
+    margin-left:-235px;
+    width:220px;
+}
+.excerpt .thumb {
+    border-radius:5px;
+    width:220px;
+    height:220px;
+    overflow:hidden;
+}
+.excerpt img {
+    display:inline;
+}
+.excerpt .focus:hover {
+    -webkit-transform:scale(1.05);
+    transform:scale(1.05);
+    -webkit-transition-timing-function:cubic-bezier(0.47,2.02,0.31,-0.36);
+    transition-timing-function:cubic-bezier(0.47,2.02,0.31,-0.36);
+}
+.excerpt header {
+    margin-bottom:10px;
+}
+.excerpt .cat {
+    color:#FFF;
+    background-color:#0086DB;
+    padding:3px 6px;
+    font-size:12px;
+    display:inline-block;
+    position:relative;
+    top:-2px;
+    margin-right:6px;
+}
+.excerpt .cat:hover {
+    opacity:.8;
+}
+.excerpt .cat i {
+    position:absolute;
+    top:50%;
+    margin-top:-4px;
+    right:-4px;
+    display:inline-block;
+    width:0;
+    height:0;
+    vertical-align:middle;
+    border-left:4px solid #3399CC;
+    border-top:4px solid transparent;
+    border-bottom:4px solid transparent;
+}
+.excerpt h2 {
+    display:inline;
+    font-size:18px;
+    line-height:24px;
+    margin-top:0;
+    font-weight:bold;
+
+}
+.excerpt h2 a {
+    color:#555;
+}
+.excerpt h2 a:hover {
+    color:#3399CC;
+}
+.excerpt .meta {
+    color:#999;
+    font-size:12px;
+    margin-bottom:10px;
+}
+.excerpt .time,.excerpt .comment,.excerpt .views {
+    cursor:pointer;
+    margin-right:20px;
+}
+.comment input {
+    margin-bottom:5px;
+    border:2px solid #ccd4d9;
+}
+.excerpt .time:hover,.excerpt .comment:hover,.excerpt .views:hover {
+    color:#3399CC;
+}
+@media (max-width:680px) {
+    .excerpt .comment {
+    display:none;
+}
+}.excerpt .meta a {
+    color:#999;
+}
+.excerpt .note {
+    font-size:12px;
+    color:#999;
+    word-wrap:break-word;
+    line-height:20px;
+    cursor:default;
+}
+
+
+@media (max-width:700px) {
+    .excerpt .note {
+    height:60px;
+    overflow:hidden
+    }
+}
+@media (max-width:640px) {
+    .article-header {
+        text-align: left;
+        padding: 15px 0;
+    }
+}
+

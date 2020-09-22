@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+    <head>
+        <title>主页</title>
+        <link rel="icon" type="image/x-icon" href="../static/img/logo.jpg"/>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+
+    </head>
+    <body>
+        <div id="page" align="center">
+            <form action="/result/" method="get">
+                <!--{%csrf_token%}-->
+                <img src="../static/img/logo.jpg"  alt="logo"  height="100" width="100"/>
+                <br>
+                <input type="text" name="keyword" placeholder="工作类型" value="" id="search"/>
+                <input type="submit" value="查询一下" id="submit_button"/>
+                <br>
+                <label>工作地点：<input class="smallinput" type="text" name="zone" value="不限" size="10"></label>&nbsp;
+                <!--<label>工资：<input class="smallinput" type="text" name="salary" value="不限" size="10">千/月</label>&nbsp;-->
+                <label>学历：
+                <select name="education">
+                    <option value ="8">学历不限</option>
+                    <option value ="2">初中及以下</option>
+                    <option value="3">中专</option>
+                    <option value="4">高中</option>
+                    <option value="5">大专</option>
+                    <option value="6">本科</option>
+                    <option value="7">硕士</option>
+                    <option value="8">博士</option>
+                </select>
+                </label>
+            </form>
+        </div>
+
+    </body>
+
+
+</html>

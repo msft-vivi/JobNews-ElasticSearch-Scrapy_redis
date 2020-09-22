@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+    <head>
+        <title>结果</title>
+        <link rel="icon" type="image/x-icon" href="../static/img/logo.jpg"/>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+        
+
+        <style>
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.pagination li {display: inline;}
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        ul.pagination li a.active {
+            background-color: #0086DB;
+            color: white;
+        }
+
+        ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+        </style>
+    </head>
+    <body>
+        <div id="left" align="center" background="b">
+            <form action="/result/" method="get">
+                
+                <a href="/search" style="text-decoration:none ">
+                    <img src="../static/img/logo.jpg"  alt="logo" id="small_logo"/>
+                </a>
+                {% if keyword %}
+                    <input type="text" name="keyword" placeholder= "工作类型" value= {{ keyword }} id="search"/>
+                {% else %}
+                    <input type="text" name="keyword" placeholder= "工作类型" value= "" id="search"/>
+                {% endif %}
+
+                <input type="submit" value="查询一下" id="submit_button"/>
+            </form>
+
+        <div style="width:760px;">
+            <font size="2" color="gray" style="float:left;">找到 {{count}} 条结果 （用时约 {{ times }} 秒）</font>
+        </div>
+        {% for content in contents %}
+        <article class="excerpt" style="" align="left">
+        <a class="focus" href="#" title="" ><img class="thumb" data-original="images/201610181739277776.jpg" src={{ content.logo }} alt="" style="display: inline;"></a>
+        <header>
+            <a class="cat" href="#" title="" >{{ content.salary.0.max }}-{{ content.salary.0.min }}千/月<i></i></a>
+            <h2><a href={{ content.url }} title=""  >{{ content.job }}</a>
+            </h2>
+        </header>
+        <p class="meta">
+            <time class="time"><i class="glyphicon glyphicon-time"></i> {{ content.zone }} </time>
+            <span class="views"><i class="glyphicon glyphicon-eye-open"></i> {{ content.experience }} </span> <a class="comment" href="" title="" target="_blank" ><i class="glyphicon glyphicon-comment"></i> {{ content.educated }} </a>
+        </p>
+        <p class="note"> {{content.description}} </p>
+        </article>
+       {% endfor %}
+
+        {% if contents %}
+            <ul class="pagination">
+                {% for page in page_urls %}
+                {% if page.0 == p %}
+                    <li><a class="active" href={{ page.1 }}>{{page.0}}</a></li>
+                {% else %}
+                    <li><a href={{ page.1 }}>{{page.0}}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+   </div>
+
+    </body>
+
+
+</html>
