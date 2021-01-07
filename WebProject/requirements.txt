@@ -20,7 +20,7 @@ itemadapter==0.1.0
 itemloaders==1.0.3
 jmespath==0.10.0
 kiwisolver==1.2.0
-lxml==4.5.2
+lxml==4.6.2
 matplotlib==3.3.1
 menuinst==1.4.16
 mkl-fft==1.1.0
