@@ -62,7 +62,7 @@ six==1.14.0
 sqlparse==0.3.1
 tornado==6.0.4
 tqdm==4.46.0
-Twisted==20.3.0
+Twisted==22.2.0
 urllib3==1.25.8
 w3lib==1.22.0
 win-inet-pton==1.1.0
