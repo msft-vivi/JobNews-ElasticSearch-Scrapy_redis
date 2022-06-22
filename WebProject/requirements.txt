@@ -26,7 +26,7 @@ menuinst==1.4.16
 mkl-fft==1.1.0
 mkl-random==1.1.1
 mkl-service==2.3.0
-numpy==1.19.1
+numpy==1.22.0
 olefile==0.46
 pandas==1.1.0
 parsel==1.6.0
